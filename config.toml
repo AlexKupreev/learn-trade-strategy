@@ -1,0 +1,17 @@
+### Trading simulation configuration ###
+# initial capital = $10k
+initial_capital = 10000.0
+# select all binary predictions with probability>=0.55
+threshold = 0.05
+# trading fees = 0.2% (buy+sell)
+fees = 0.002
+# select top_k predictions
+top_k = 5
+# DOES NOT WORK now
+portfolio_optimization = false
+# automatic sell (with loss) if price (any of next 5 days) is lower than -20% from Adj.Close
+stop_loss = 0.8
+# automatic sell (with profit) if price (any of next 5 days) is higher than +2% from Adj.Close
+take_profit = 1.02
+# buy next day with the price = [Adj.Close] * 0.99 (try to buy cheaper)
+lower_entry = 0.99
